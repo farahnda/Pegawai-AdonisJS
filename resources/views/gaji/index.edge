@@ -1,0 +1,22 @@
+@extends('layouts.app')
+
+@section('content')
+  <h1>Daftar Gaji Pegawai</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Pegawai</th>
+        <th>Gaji Pokok</th>
+      </tr>
+    </thead>
+    <tbody>
+      @each(pegawai in pegawais)
+        <tr>
+          <td>{{ pegawai.nama }}</td>
+          <td>Rp{{ pegawai.gaji_pokok }}</td>
+        </tr>
+      @endeach
+    </tbody>
+  </table>
+@endsection
